@@ -1,8 +1,8 @@
+const buttonEl = document.querySelector("button");
 const catImageEl = document.querySelector("img");
 const activityEl = document.querySelector("#activity");
 
-catImageEl.addEventListener("click", (e) => {
-  catImageEl.classList = "loader";
+buttonEl.addEventListener("click", (e) => {
   activityEl.innerText = "Loading...";
 
   fetch("https://www.boredapi.com/api/activity")

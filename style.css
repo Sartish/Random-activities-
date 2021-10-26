@@ -1,36 +1,162 @@
-img {
+/* UPDATE THE CSS CODE */
+/* TIPS 1: change colors  and background colors for h1
+/* TIPS 2: change colors and background colors for button.
+/*TIPS 3: make image round, using property border-radius: 50%
+*/
+
+body {
+    /*add a font-family ex: font-family: Helvetica, "sans serif"; or use google font!*/
+    /*add another background color */
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    background-color: #368dda;
+  }
+  
+  .header-section {
+    text-align: center;
+    padding: 10px;
+    margin-top: 120px;
+    margin-bottom: 0px;
+  }
+  
+  /*add another font-family and font-size*/
+  h1 {
+    font-size: 30px;
+  }
+  
+  /* refers to p tag inside the chat bubble */
+  /* change font-size and add a color*/
+  p {
+    font-size: 18px
+  }
+  
+  /*add border-radius: 50%; to make picture round*/
+  img {
     max-width: 300px;
     cursor: pointer;
-    /* border-radius: 50%;
-    background-color: midnightblue; */
-}
-
-.container {
-    /* background-color: aqua; */
+    display: flex;
+    margin-right: 26px;
+    margin-top: 150px;
+   
+  }
+  
+  /* add background-color and font-family maybe also border-radius: 50px; */
+  button {
+    background-color: pink; /* gray */
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /*add animation to button when you hover? just change colors and se what happens!*/
+  button:hover {  
+    transition: background-color 0.5s ease-in, color 0.5s ease-in;
+    color: black;
+    background-color: #39A388;
+  }
+  
+  /***** DEFAULT STYLING, OBS!, NO NEED TO STYLE*****/
+  .activity-section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  .activity {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding:10px;
+    font-size: 18px;
+    font-family: arial;
+  }
+  
+  .container {
     display: flex;
     justify-content: center;
     padding: 50px;
     flex-direction: column;
     align-items: center;
-}
-
-.activity {
-    margin-top: 100px;
-    margin-bottom: 50px;
-    font-size: 36px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #3498db; /* Blue */
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
   }
   
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  /******CHAT BUBBLE******/
+  .tri-right.border.btm-right-in:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+    left: auto;
+      right: 30px;
+      bottom: -40px;
+      border: 20px solid;
+      border-color: #000000 #000000 transparent transparent;
   }
+  
+  .tri-right.btm-right-in:after {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+    left: auto;
+      right: 38px;
+      bottom: -20px;
+      border: 12px solid;
+      border-color: white white transparent transparent;
+  }
+  
+  /* CSS talk bubble */
+  .talk-bubble {
+      margin: 40px;
+    display: inline-block;
+    position: relative;
+      width: 200px;
+      height: auto;
+  }
+  
+  .border {
+    border: 6px solid #000000;
+  }
+  
+  .round {
+    border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+  }
+  
+  .bubble {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    width: 300px;
+    background: #fff;
+    border-radius: 40px;
+    padding: 24px;
+    text-align: center;
+    color: #000;
+    margin-top: 0px;
+  }
+  
+  .bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 24px solid #fff;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #fff;
+    border-bottom: 20px solid transparent;
+    left: 32px;
+    bottom: -24px;
+  }
+  

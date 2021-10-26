@@ -8,12 +8,24 @@
     <title>Randomizer app</title>
   </head>
 
-  <body id="body">
-    <div class="container">
-        <h1>Bored and need an activity? Pet the cat for inspiration...</h1>
-        <div class="activity" id="activity"></div>
-    <img src="https://i.ibb.co/HxTx9tR/catty-removebg-preview.png" alt="">
+  <body>
+    <section class="header-section">
+      <h1>Bored and need an activity?</h1>
+      <button>Activity</button>
+    </section>
 
-    <script src="./script.js"></script>
+    <!--Change image adress. Find a picture online, right click and "save image adress" paste in teh new link in src=""-->
+    <section class="activity-section">
+      <img
+        src="https://i.ibb.co/HxTx9tR/catty-removebg-preview.png"
+        alt="picture"
+      />
+      <div class="bubble bubble-bottom-left" contenteditable>
+        <div class="activity" id="activity">
+          <p>press the button...</p>
+        </div>
+      </div>
+    </section>
   </body>
+  >
 </html>
